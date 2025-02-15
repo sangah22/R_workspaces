@@ -44,9 +44,8 @@ print(dim(people))
 print(colnames(people))
 
 # 3번째 컬럼의 3번째 값은 무엇인가?
-# result = people[people$gender[3]]
-# print(result)
-
+result = people$gender[3]
+print(result)
 
 # 데이터 마지막 3개행 출력하기
 print(tail(people,3))
@@ -57,5 +56,10 @@ print(people)
 
 # 나이가 30이상인 사람들만 출력하는 코드를 작성하세요
 
-UP_30 = people[peobple]
+UP_30 = people[people$age >= 30,]
+print(UP_30)
 
+# name, age 두개의 컬럼으로 구성된 새로운 데이터 프레임을 정의하기
+
+result2 = people[,c('name', 'age')]
+print(result2)
